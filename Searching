@@ -1,0 +1,35 @@
+package quizbp;
+ import java.util.*;
+
+public class PencarianBarang {
+    private List<String> barang;
+
+    public PencarianBarang() {
+        barang = new ArrayList<>();
+    }
+
+    public void tambahBarang(String namaBarang) {
+        barang.add(namaBarang);
+        }
+
+    public List<String> cariBarang(String kataKunci) {
+        List<String> hasilPencarian = new ArrayList<>();
+        for (String b : barang) {
+            if (b.toLowerCase().contains(kataKunci.toLowerCase())) {
+                hasilPencarian.add(b);
+            }
+        }
+        return hasilPencarian;
+    }
+
+    public static void main(String[] args) {
+        PencarianBarang pb = new PencarianBarang();
+        pb.tambahBarang("Buku");
+        pb.tambahBarang("Pensil");
+        pb.tambahBarang("Pulpen");
+        pb.tambahBarang("Penghapus");
+
+        System.out.println("Hasil Pencarian: " + pb.cariBarang("PEN"));
+    }
+}
+    
