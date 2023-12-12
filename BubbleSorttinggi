@@ -1,0 +1,21 @@
+package quizbp;
+public class QuizBP {
+    public static void main(String[] args) {
+	int harga[] = {100,50,300,200,400};
+	int i, j, temp;
+
+	for (i=0; i<=harga.length-1; i++){
+		for(j=0; j<=harga.length-1; j++){}
+		for(j=0; j<=harga.length-1; j++)
+		if(harga[i]>harga[j]){
+			temp = harga[j];
+			harga [j]= harga[i];
+			harga[i]=temp;}
+			
+	}
+	
+		for(i=0; i<=harga.length-1; i++){
+	System.out.print(harga[i] + "  ");
+	}
+}
+}
